@@ -1,0 +1,24 @@
+from easy_spider_tool import cookie_to_dic, format_json
+from easy_twitter_crawler import set_proxy, set_cookie, search_crawler, TwitterFilter
+
+key_word = 'elonmusk'
+
+twitter_filter = TwitterFilter(key_word)
+twitter_filter.word_category(lang='en')
+twitter_filter.account_category(filter_from='', to='', at='')
+twitter_filter.filter_category(only_replies=None, only_links=None, exclude_replies=None, exclude_links=None)
+twitter_filter.interact_category(min_replies='', min_faves='', min_retweets='')
+twitter_filter.date_category(since='', until='')
+key_word = twitter_filter.filter_join()
+
+set_proxy(proxy)
+set_cookie(cookie_to_dic(cookie))
+
+for info in search_crawler(
+        key_word,
+        data_type='Top',
+        count=10,
+):
+    set_proxy(proxy)
+    set_cookie(cookie_to_dic(cookie))
+    print(format_json(info))
