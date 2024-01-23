@@ -1,0 +1,49 @@
+.map-bg{margin-top: 70px; background: url(../image/map-main-bg_01.jpg) no-repeat center top;}
+.map-content{position: relative; height:100%; text-align: center;background: url(../image/map-main-bg_03.jpg) no-repeat center bottom;}
+.map-area{position: absolute; -webkit-transition:all 0.4s; z-index: 1;}
+.map-mini{transform:scale(0.5); display: block; position: relative; width:1820px; transition:transform 0.4s; display: none;}
+.map-area>img{height:100%; width:auto; z-index: 10;}
+.map-area map{z-index: 12;}
+.map-z{text-align: center; color:#fff; padding:40px 0px 20px 0px; font-size: 24px;}
+.map-z p{font-size: 14px;}
+area{outline: none;}
+.big-area{background: rgba(0,0,0,.7); text-align: center; position: fixed; left:0; top:0; width:100%; height:100%; opacity: 0; top:2000px; z-index: 500;}
+.big-area-pic{position: relative; display: inline-block;}
+.big-area-pic>img{width:auto; height:auto;}
+.map-big-close{color:#fff; font-size: 16px; background: #F78B0D; cursor: pointer; border-radius: 50%; display: block; position: absolute; right:20px; top:20px; width:30px; height:30px; line-height: 30px;}
+
+.all-map{width:100%; height:980px; position: absolute; overflow: hidden; z-index: 20;}
+.area1{left:0; top:0;}
+.area2{left:564px; top:-7px;}
+.area3{left:854px; top:116px;}
+.area4{left:636px; top:467px;}
+
+.big-area .points{position: absolute; left:0; top:0; width:100%; height:100%; color: #fff; font-size: 24px;}
+.point{left:50%; top:50%; position: absolute; text-align: center; width:26px; height:26px;}
+.point .icon{ cursor: pointer; z-index: 1; position: relative;}
+.point .icon img{width:100%; border-radius: 50%; box-shadow: 4px 4px 4px rgba(0,0,0,.4);}
+.point:hover .point-name{ opacity: 1; left:20px;}
+.point .point-name{position: absolute; pointer-events: none; transition:all 0.2s; opacity: 0; left:0;  background: #fff; color:#000; font-size: 14px; top:0px;  border-radius: 16px; height:24px; line-height: 26px; z-index: 0; padding:0 20px;white-space:nowrap;}
+.point-intro{position: fixed; display: none; width:100%; height:100%; left:0; top:0; background: rgba(0,0,0,.5); text-align: center; z-index: 600;}
+.point-intro .intro-wrapper{width:600px; height:240px; background: #fff; border-radius: 10px; margin:0 auto; margin-top: 20%; padding:30px; position: relative;}
+.point-intro .intro-close{position: absolute; width:30px; height:30px; font-size: 14px; color:#fff; background: #ffaa00; line-height: 30px; text-align: center; border-radius: 50%; right:30px; top:30px; cursor: pointer;}
+.point-intro .intro-thumb{float:left;}
+.point-intro .intro-thumb img{width:120px; height:120px;}
+.point-intro .intro-txt{float:right; width:430px; text-align: left;}
+.point-intro .intro-txt h5{font-size: 24px; border-bottom: #eee solid 1px; padding-bottom: 20px; margin-bottom: 20px;}
+.point-intro .intro-txt p{font-size: 14px; color:#666;}
+.point-intro .intro-more{display: block; margin-top: 20px; font-size: 14px; border:#999 solid 1px; border-radius: 5px; line-height: 32px; width:120px; text-align: center; color:#999;}
+.point-intro .intro-more:hover{color:#fff; background: #FF9F0F; border:#FF9F0F solid 1px;}
+
+.a-logo{position: absolute; z-index: 11; pointer-events: none;}
+.a-zoom{display: none;}
+
+@keyframes alogowave{
+	0% {margin-top:0;}
+	50% {margin-top:-10px;}
+	100% {margin-top:0px;}
+}
+
+.a-logo-ani{
+	animation:alogowave 1s infinite;
+}
