@@ -1,0 +1,415 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+<meta name="applicable-device" content="pc,mobile">
+<title>博彩的两大敌人—贪心和急躁-博彩虎</title>
+<meta name="keywords" content="博彩急躁、博彩贪心、博彩敌人">
+<meta name="description" content="博彩也有好几年了，经过了最初的胡搞期，那时候基本都是乱下。然后拼命学习各种打法，再到现在基本稳定了自己的打法。一路走来的心酸只有自己知道。最近想总结一些经验供新人学习也供">
+<link rel="stylesheet" href="static/css/layui.css" type="text/css">
+<link rel="stylesheet" href="static/css/style1.css" type="text/css">
+<link rel="stylesheet" href="static/css/normalize.min.css">
+<link rel="stylesheet" href="static/css/style-1.css" type="text/css">
+<link rel="stylesheet" href="static/css/app1.css" type="text/css">
+<script type="text/javascript" src="static/js/jquery-1.8.3.min.js"></script>
+<style>
+    .w5 ul li:not(:last-child){margin-right: 20px;}
+    .w3{padding-top: 15px;}
+    .w5 ul{
+    flex-wrap: nowrap;
+    display: flex;
+}
+.w5 ul li{max-width: 260px;
+    min-width: unset!important;}
+    .lid{    width: 260px;
+    height: 100%;}
+.w2-li1 img {
+
+    height: 100%;
+    margin-left: 10%;
+    border-radius: 10px;
+    width: 80%;
+}
+  .layui-collapse{border-color: #393d49;margin-bottom: 5px;}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .w3{padding-top: 75px;}
+  body{margin-top: -16px;}  
+.w2-li2 img{
+width: 50%;
+}
+.w2-li1{height: 96px;}
+
+.w2-li1 img {
+    margin-top: 0;
+    height: 100%;
+    margin-left: 10%;
+    border-radius: 10px;
+    width: 80%;
+}
+
+}
+@media screen and (min-width: 480px) and (max-width: 768px){
+  body{margin-top: -16px;}  
+    .w3{padding-top: 75px;}
+.w2-li2 img{
+width: 50%;
+}
+.w2-li1{height: 96px;}
+
+.w2-li1 img {
+    margin-top: 0;
+    height: 100%;
+    margin-left: 10%;
+    border-radius: 10px;
+    width: 80%;
+}
+ 
+}
+@media (max-width: 480px){
+     .w3{padding-top: 75px;}
+  body{margin-top: -16px;}  
+.w2-li2 img{
+width: 50%;
+}
+
+    .w2-li1 img {
+        margin-top: 8px;
+    height: 80%;
+    margin-left: 20%;
+    border-radius: 10px;
+    width: 80%;
+}
+
+}
+@media (max-width: 1024px){
+    .aptop{padding-top: 20px;}
+}
+</style>
+</head>
+
+<body>
+<!--头部-->
+<div class="header">
+<div class="topbar">
+<div class="topbar-c">
+<div class="logo"><a href="index.html"><img src="static/picture/logo1.png" alt="博彩虎"></a></div>
+<div class="nav">
+<ul class="layui-nav layui-bg-cyan">
+<li class="layui-nav-item layui-this"><a href="index.html">首 页</a></li>
+  <li class="layui-nav-item"><a href="news.html">资讯</a></li>
+<span class="layui-nav-bar" style="width: 0px; left: 0px; opacity: 0;"></span></ul>
+</div>
+</div>
+</div>
+
+</div>
+<div class="aptop">
+<div class="menu">
+  <input type="radio" name="menu" id="menu-open">
+  <input type="radio" name="menu" id="menu-close" checked="checked">
+  <label class="overlay" for="menu-close"></label>
+  <label for="menu-open"> <span></span><span></span><span></span></label>
+  <div class="side-menu">
+    <label class="menu-close" for="menu-close"><span></span><span></span></label>
+    <nav>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="news.html">资讯</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="alogo"><a href="index.html"><img src="static/picture/logo1.png" alt="博彩虎"></a></div>
+</div>
+<!--头部结束-->	
+<!--第3部分-->		
+<div class="w3">
+	<div class="p1">
+		<h1>
+			<strong>博彩的两大敌人&mdash;贪心和急躁</strong></h1>
+		<div style="text-align: center;">
+			<img alt="" src="static/picture/贪心.png"><br>
+			&nbsp;</div>
+		<p>
+			博彩也有好几年了，经过了最初的胡搞期，那时候基本都是乱下。然后拼命学习各种打法，再到现在基本稳定了自己的打法。一路走来的心酸只有自己知道。最近想总结一些经验供新人学习也供大家共同探讨。今天谈一谈博彩的两大敌人。一就是贪心，很多人博彩上来就定了一个目标，比如赢500元就走，可是当真的赢到了500元的时候，很多人就心想再多下一手把，多赢一点，这就是贪心。</p>
+		<p>
+			<strong><span style="COLOR: #ff0000">要知道，博彩是久赌必输的。时间越长输的概率越大，一方面是因为概率决定，另一方面是玩久了人也变得不清醒，在这里给大家一点建议。</span></strong></p>
+		<p>
+			<strong>1.希望在作战前定好止盈止损位。一旦达到自己设定的值。立马要走人，不要违反自己定的规矩。</strong></p>
+		<p>
+			<strong>2.关于止损止盈位置的设定。这里每个人的情况不一样可以根据自己的习惯来设定，在这里献上我自己的设定位置。</strong></p>
+		<p>
+			<strong>止损：不止损，输光为止，竟然钱存进去了，就是想准备坐好输光的打算，如果要设定止损位置，还不如少存点。</strong></p>
+		<p>
+			<strong>止盈：本金翻倍走人。</strong></p>
+		<p>
+			<strong>这样的好处：本金翻倍和全部输光的期望值相等。如果长久玩下去胜利的次数大于清代的次数你就会获利。个人不喜欢设定20%左右类似的小额止盈。在这里就不多说了，大家可以体会一下。</strong></p>
+		<p>
+			<strong><span style="COLOR: #ff0000">第二就是急躁。主要表现在两个方面。</span></strong></p>
+		<p>
+			<strong>1.是想博彩的心情急躁，自己也有体会，本人是上班族，上班的时候就惦记着博彩，时不时拿出手机，看看论坛发生了什么事，有什么优惠活动等等。</strong></p>
+		<p>
+			<strong>这里借机和大家解释一下。手中有赌，意为自己一直处在博彩之中，不管是出于什么目的，靠博彩赚钱也好，娱乐也好。心中无赌，这就是高境界了，意为能从心底放下博彩，不为博彩怒，不为博彩喜。把它当着生活中的一件小事去对待。话扯的有点远了，说这些是想表明，急躁的人就是心中有赌，放不下博彩额表现。自己也不例外，还在改进中。</strong></p>
+		<p>
+			<strong>2.就是在博彩当中了，最突出的表现在输钱的时候，这就是考验一个博彩人的最好的时候，急躁的人往往想到的是大注梭哈搞回来沉不住气。</strong></p>
+		<p>
+			其实在这里可以和大家简单分析一下，在假设DC不作弊的情况下。运气其实是在博彩中占分量比较重的了。连黑输钱的时候证明你运气不好，可是你非不信邪，死命冲，你说这样能不死吗？长期下来也是输的惨。最好的办法时，平注或者小注去慢慢度过连黑的输钱周期，你要知道在大数定律下，输赢的次数是不会相差太大的，等待机会，连赢的时候加大主码。取得正收益。这时有人会提出疑问了，怎么判断自己的运气了？呵呵这就要谈到在博彩是主码运用的知识了。</p>
+		<p>
+			不知不觉写了这么多，很多都是自己宝贵的经验，也无私奉献了呵呵。希望对大家有帮助，如果有机会下次讲讲个人的主码运用及自己的打法。</p>
+		<p>
+			想知道更多博弈知识，请关注<span style="COLOR: #ff0000"><strong>博彩虎</strong></span>（<a href="http://www.bocaihu.com">bocaihu.com</a>）</p>
+		<h3>
+			<strong><span style="COLOR: #ff0000">更多热门游戏平台推荐</span></strong></h3>
+		<br>
+		<div class="layui-collapse">
+			<div class="layui-colla-item item-2">
+				<ul>
+					<li>
+						<div class="lista">
+							<div class="w2-li1">
+								<img src="static/picture/1.jpg"></div>
+							<div class="w2-li2">
+								<div class="fun">
+									<span>4.9 </span> <em> /5 </em></div>
+								<img src="static/picture/active.svg">
+								<p>
+									由589位用户评价</p>
+							</div>
+							<div class="w2-li3">
+								<em>本周已有368位用户领取 </em>
+								<div class="li3title">
+									电竞周负盈利返回1.8% 最高返还2000元</div>
+							</div>
+							<div class="w2-li4">
+								<div class="cx">
+									<span>存款下限 </span> <b> RMB 100 </b></div>
+								<div class="cx-b">
+									<span>存款上限 </span> <b> 没有限制 </b></div>
+							</div>
+							<div class="w2-li5">
+								<div class="w2-li5box" style=" margin-top: 10px; ">
+									<a href="https://service.mf-aff-trx.com/C.ashx?btag=a_13666b_1727c_&amp;affid=2013031&amp;siteid=13666&amp;adid=1727&amp;c=" rel="nofollow" target="_blank">立即加入游戏 &gt; </a></div>
+								<div class="w2-li5-2" style=" background-color: #5fb878; ">
+									<a href="index.html">查看更多博彩平台 &gt; </a></div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<ul>
+			</ul>
+		</div>
+		<div class="layui-collapse">
+			<div class="layui-colla-item item-2">
+				<ul>
+					<li>
+						<div class="lista">
+							<div class="w2-li1">
+								<img src="static/picture/ms.jpg"></div>
+							<div class="w2-li2">
+								<div class="fun">
+									<span>4.9 </span> <em> /5 </em></div>
+								<img src="static/picture/active.svg">
+								<p>
+									由567位用户评价</p>
+							</div>
+							<div class="w2-li3">
+								<em>本周已有458位用户领取 </em>
+								<div class="li3title">
+									电竞每日返水0.33% 无上限 无流水</div>
+							</div>
+							<div class="w2-li4">
+								<div class="cx">
+									<span>存款下限 </span> <b> RMB 100 </b></div>
+								<div class="cx-b">
+									<span>存款上限 </span> <b> 没有限制 </b></div>
+							</div>
+							<div class="w2-li5">
+								<div class="w2-li5box" style=" margin-top: 10px; ">
+									<a href="https://affm5688.com/_i3yw0-UIlQ5WjObZuhu7lGNd7ZgqdRLk/1/" rel="nofollow" target="_blank">立即加入游戏 &gt; </a></div>
+								<div class="w2-li5-2" style=" background-color: #5fb878; ">
+									<a href="index.html">查看更多博彩平台 &gt; </a></div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<ul>
+			</ul>
+		</div>
+		<div class="layui-collapse">
+			<div class="layui-colla-item item-2">
+				<ul>
+					<li>
+						<div class="lista">
+							<div class="w2-li1">
+								<img src="static/picture/188bt.jpg"></div>
+							<div class="w2-li2">
+								<div class="fun">
+									<span>4.9 </span> <em> /5 </em></div>
+								<img src="static/picture/active.svg">
+								<p>
+									由632位用户评价</p>
+							</div>
+							<div class="w2-li3">
+								<em>本周已有329位用户领取 </em>
+								<div class="li3title">
+									30%新会员首存红利，最高可享888元！！</div>
+							</div>
+							<div class="w2-li4">
+								<div class="cx">
+									<span>存款下限 </span> <b> RMB 100 </b></div>
+								<div class="cx-b">
+									<span>存款上限 </span> <b> 没有限制 </b></div>
+							</div>
+							<div class="w2-li5">
+								<div class="w2-li5box" style=" margin-top: 10px; ">
+									<a href="https://aff.1x8x8xbxextxkxoxrxexa.com/zh-cn/register?ref=4213480b-a269-478a-993b-3addaace9407" rel="nofollow" target="_blank">立即加入游戏 &gt; </a></div>
+								<div class="w2-li5-2" style=" background-color: #5fb878; ">
+									<a href="index.html">查看更多博彩平台 &gt; </a></div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<ul>
+			</ul>
+		</div>
+		<div class="layui-collapse">
+			<div class="layui-colla-item item-2">
+				<ul>
+					<li>
+						<div class="lista">
+							<div class="w2-li1">
+								<img src="static/picture/bwin.png"></div>
+							<div class="w2-li2">
+								<div class="fun">
+									<span>4.9 </span> <em> /5 </em></div>
+								<img src="static/picture/active.svg">
+								<p>
+									由783位用户评价</p>
+							</div>
+							<div class="w2-li3">
+								<em>本周已有399位用户领取 </em>
+								<div class="li3title">
+									100%首存奖金最高888 人民币</div>
+							</div>
+							<div class="w2-li4">
+								<div class="cx">
+									<span>存款下限 </span> <b> RMB 100 </b></div>
+								<div class="cx-b">
+									<span>存款上限 </span> <b> 没有限制 </b></div>
+							</div>
+							<div class="w2-li5">
+								<div class="w2-li5box" style=" margin-top: 10px; ">
+									<a href="https://bwredir.com/1I52?p=%2Fregistration%2F&amp;s1=bch" rel="nofollow" target="_blank">立即加入游戏 &gt; </a></div>
+								<div class="w2-li5-2" style=" background-color: #5fb878; ">
+									<a href="index.html">查看更多博彩平台 &gt; </a></div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<ul>
+			</ul>
+		</div>
+	</div>
+</div>
+<br>
+
+<!--第3部分结束-->	
+
+<!--第5部分-->
+<div class="w5">
+<div class="w5title">相关文章</div>
+    <ul>
+        <li>
+        <div class="lid">
+        <img src="static/picture/稳定.png">
+        <span>赌博心理技巧—忍、等、稳、狠、滚</span>
+        <p>现今所有赌场游戏的取胜机会率，已通过庄家精密的计算，要在庄家手中获胜，是相当困难，能做到的，只有将跟庄家抗衡的时间延长，当中更需要三大原</p>
+         <div class="lid-more"><a href="144.html">阅读更多 ></a></div>
+        </div>
+          <li>
+<li>
+        <div class="lid">
+        <img src="static/picture/贪心.png">
+        <span>博彩的两大敌人—贪心和急躁</span>
+        <p>博彩也有好几年了，经过了最初的胡搞期，那时候基本都是乱下。然后拼命学习各种打法，再到现在基本稳定了自己的打法。一路走来的心酸只有自己知道</p>
+         <div class="lid-more"><a href="">阅读更多 ></a></div>
+        </div>
+          <li>
+<li>
+        <div class="lid">
+        <img src="static/picture/推荐1.png">
+        <span>在线博彩行业的顶级技术创新</span>
+        <p>体育博彩的受欢迎程度一直在迅速增加，尤其是随着在线体育博彩的推出。今天，人们可以随时随地轻松地投注来自世界任何角落的不同体育赛事、球队和</p>
+         <div class="lid-more"><a href="142.html">阅读更多 ></a></div>
+        </div>
+          <li>
+<li>
+        <div class="lid">
+        <img src="static/picture/博彩盘口.png">
+        <span>为什么博彩公司的体育盘口几乎一样？</span>
+        <p>如果赔率差距过大的话，其中可能存在套利空间。比如说足球赌胜负平，赔率大约应当是猜中概率的倒数，一般来说赔率的倒数和大于1，多的部分相当于赌</p>
+         <div class="lid-more"><a href="141.html">阅读更多 ></a></div>
+        </div>
+          <li>
+
+    </li></ul>
+</div>
+<!--第5部分结束-->
+<div class="foot">
+<div class="foot-c">
+<div class="foot-list">
+<ul>
+<li><a href="index.html">首页</a></li>
+<li><a href="news.html">资讯</a></li>
+</ul>
+</div>
+</div>
+</div>	
+	
+<script src="static/js/layui.js"></script>
+<script>
+layui.use('carousel', function(){
+  var carousel = layui.carousel;
+  //建造实例
+  carousel.render({
+    elem: '#test1'
+    ,width: '100%' //设置容器宽度
+    ,arrow: 'always' //始终显示箭头
+    //,anim: 'updown' //切换动画方式
+  });
+layui.use('flow', function(){
+  var flow = layui.flow;
+  //当你执行这样一个方法时，即对页面中的全部带有lay-src的img元素开启了懒加载（当然你也可以指定相关img）
+  flow.lazyimg(); 
+});
+
+//页面层
+$("#rim").click(function () {
+layer.open({
+  type: 1,
+  skin: 'layui-layer-rim', //加上边框
+  area: ['420px', '240px'], //宽高
+  content: 'html内容'
+});
+});	
+	
+});
+</script>
+<script>
+//注意：折叠面板 依赖 element 模块，否则无法进行功能性操作
+layui.use('element', function(){
+  var element = layui.element;
+  
+  //…
+});
+</script>
+</body>
+</html>
