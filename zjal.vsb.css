@@ -1,0 +1,147 @@
+/*需要更具实际情况调整的*/
+/*图片显示大小*/
+/*整个组件表格样式*/ 
+.nav_changeimg_1  
+{  
+    list-style:none; 
+    margin:0;
+    padding:0;
+    background:#000000;
+    width: 650px;}
+/*大图区样式*/ 
+.nav_changeimg_1 div.bigmvfc  
+{  
+   width: 650px; /*大图显示宽度*/ 
+   height: 300px;} 
+/*图片显示层样式*/ 
+.nav_changeimg_1 div.bigbimg  
+{
+   width: 650px; /*大图显示宽度*/ 
+   height: 300px;} 
+/*大图样式*/ 
+.nav_changeimg_1 IMG.bigimg 
+{ 
+    border:none;/*没有边框*/ 
+    width: 650px; /*大图显示宽度*/ 
+    height: 300px;} 
+/*标题区样式*/ 
+.nav_changeimg_1 div.mvfc1  
+{ 
+    left: 0px; /*标题滤镜区显示位置x*/ 
+    top: 300px; /*标题滤镜区显示位置y(需要根据打图显示的高度进行调整)*/ 
+    width:650px; /*标题滤镜区宽度(一般要和大图显示宽度一致)*/ 
+    height: 32px;} 
+/*真正的文字显示区域*/ 
+.nav_changeimg_1 div.con  
+{ 
+    padding-right: 25px;/*距离右边距的大小(相对于滤镜区域)*/  
+    padding-left: 25px; /*距离左边距的大小(相对于滤镜区域)*/ 
+    padding-top: 8px; /*距离顶部距的大小(相对于滤镜区域)*/ 
+    padding-bottom: 0px;  /*距离底部距的大小(相对于滤镜区域)*/ 
+    left: 0px; /*显示位置x*/ 
+    top: 300px;  /*显示位置y(需要根据打图显示的高度进行调整)*/    
+    width: 650px; /*显示区宽度*/ 
+    height: 24px; /*显示区高度*/ 
+    color: #fff; /*显示颜色*/ 
+    line-height: 20px; /*行高*/ 
+    text-align: left;} 
+/*文字链接样式*/ 
+.nav_changeimg_1 a.hreftitle 
+{ 
+    color:#FFFFFF;/*文字颜色*/ 
+    text-decoration:none;} 
+/*小图区层样式*/ 
+.nav_changeimg_1 div.simg  
+{  
+    width: 650px; /*小图显示区宽度(需要根据小图和显示的数量进行调整)*/ 
+    height: 51px;} 
+/*小图区的整个表格样式*/ 
+.nav_changeimg_1 ul.smallul
+{ 
+    width:650px;/*表格宽度(需要根据小图和显示的数量进行调整)*/ 
+    border:none; /*表格边框*/
+    list-style:none; 
+    margin:0;
+    padding:0;} 
+/*一张小图站占的表格宽度*/ 
+.nav_changeimg_1 li.smallli 
+{ 
+    float:left;
+    text-align:center;
+    width:70px;/*小图的表格宽度*/ 
+    margin:0;
+    padding:0;} 
+/*获得焦点的小图样式*/ 
+.nav_changeimg_1 IMG.f1  
+{ 
+    border: #006ec5 3px solid;/*获得焦点的小图边框色*/ 
+    width:60px;/*小图显示宽度*/ 
+    height:40px;} 
+/*没有获得焦点的小图样式*/ 
+.nav_changeimg_1 IMG.f2  
+{ 
+    border: #999 3px solid; /*小图边框色*/ 
+    filter: alpha(opacity=80);/*透明程度*/ 
+    width:60px;/*小图显示宽度*/ 
+    height:40px;}
+/*需要更具实际情况调整结束*/
+
+/*大图区样式，修改大图区显示的大小*/ 
+/*不需要改变的*/ 
+.nav_changeimg_1 div.bigmvfc  
+{  
+    overflow: hidden;/*设置层中的图片如果超过层的大小则隐藏不显示多余部分*/ 
+    position: relative;} 
+.nav_changeimg_1 div.bigbimg  
+{ 
+    filter: progid:DXImageTransform.Microsoft.Fade ( duration=0.5,overlap=1.0 );} 
+.nav_changeimg_1 div.mvfc1  
+{ 
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://mat1.qq.com/musictop2/09imgindex/imgindex/tbg1.png', sizingMethod='scale');  
+    background-image: url(http://mat1.qq.com/musictop2/09imgindex/imgindex/tbg1.png)! important;  
+    position: absolute;} 
+.nav_changeimg_1 div.con  
+{ 
+    filter: dropshadow(color=#000000,offx=1,offy=1);  
+    position: absolute;} 
+.nav_changeimg_1 div.simg  
+{  
+    margin: 0px;  
+    overflow: hidden;   
+    cursor: pointer;} 
+.nav_changeimg_1 div.dis  
+{ 
+    display: block;} 
+.nav_changeimg_1 div.undis  
+{ 
+    display: none;} 
+/*不需要改变结束*/ 
+
+.vsbcontent-table-container-outer { position: relative;}
+.vsbcontent-table-container
+{
+    width: 98%;
+    overflow-y: auto;
+    _overflow: auto;
+    margin: 2px;}
+.vsbcontent-table-container::-webkit-scrollbar
+{
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;}
+.vsbcontent-table-container::-webkit-scrollbar-thumb
+{
+    border-radius: 8px;
+    border: 3px solid #fff;
+    background-color: rgba(0, 0, 0, .3);}
+.vsbcontent-table-container-fade
+{
+    position: absolute;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,.5), #fff);
+    background-image: -moz-linear-gradient(0deg, rgba(255,255,255,.5), #fff);
+    background-image: -ms-linear-gradient(0deg, rgba(255,255,255,.5), #fff);
+    background-image: -o-linear-gradient(0deg, rgba(255,255,255,.5), #fff);
+    background-image: linear-gradient(0deg, rgba(255,255,255,.5), #fff);}
