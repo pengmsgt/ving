@@ -1,0 +1,117 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>昌都天气预报代码调用</title>
+    <link href="static/css/mobile.css" rel="stylesheet" type="text/css">
+    <link href="static/css/new_zishiying.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #mobile1{display:block}
+        #mobile1 .divCurrentWeather img{ padding: 0 5px ;}
+        .flex{display:flex!important}
+    </style>
+    <script type="text/javascript" src="static/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        var color = bgcolor = bdcolor = site = icon = "";
+        var num = wind = 0;
+        $(document).ready(function(){
+            init();
+            if (typeof(icon) != 'undefined' && icon != '') {
+                icon = 'tqicon1'
+            }else{
+                $("img.pngtqico").each(function(i){
+                    this.src = this.src.replace("tianqibig", icon);
+                });
+            }
+            if (typeof(bgcolor) != 'undefined' && bgcolor != '') {
+                $("#mobile1").css('background-color', bgcolor);
+            }
+            if (typeof(bdcolor) != 'undefined' && bdcolor != '') {
+                $("#mobile1").css('border', '1px solid ' + bdcolor);
+            }
+            if (typeof(color) != 'undefined' && color != '') {
+                $("#mobile1 .cc30").css('color', color);
+                $("#mobile1 a").css('color', color);
+                $("#mobile1 .c390").css('color', color);
+            }
+            if (typeof(site) != 'undefined' && site == 'zgwdq') {
+                $("#link_more").html('[<a class="cc30" href="//www.tianqi.com/data/html/code_city.html?site=sds">更换城市</a>]');
+            }
+            if (typeof(wind) != 'undefined' && wind == 0) {
+                $("#mobile1 span.wind").remove();
+            }
+            if (typeof(textalign) != 'undefined' && textalign == 1) {
+                $("#mobile1").addClass('flex')
+            }
+        });
+        function init()
+        {
+            if(num == 0) num=2;
+
+            if(num == 1) {
+                $("div.divForecastWeather").remove();
+            }
+            if (typeof(icon) != 'undefined' && icon != '') {
+                $("img.pngtqico").each(function(i){
+                    this.src = this.src.replace("images/tianqi", "images/" + icon);
+                });
+            }
+        }
+    </script>
+    <style type="text/css">
+        #mobile1{
+            width:100%;
+        }
+    </style>
+</head>
+<body marginwidth="0" marginheight="0" style="background-color:transparent;">
+<div id="mobile1" class="code1 flex_center" style="font-size: 12px;">
+    <a target="_blank" href="javascript:;" title="昌都天气预报,点击查看昌都未来七天天气预报 ">
+        <div class="divCurrentWeather">
+            <span class="cityname">昌都</span>
+            <img class='pngtqico' align='absmiddle' src='static/images/tianqi/b1.png' style='border:0;width:20px;height:20px'>多云            <span class="cc30">-4</span>～<span class="c390">11</span>
+        </div>
+
+    </a>
+    <div id="link_more" class="order">
+            </div>
+</div>
+<div style="display: none;">
+
+</div><div style="display: none;">
+    <script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?86f43783acc56b0c8abb5bb039edc763";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript" src="https://s5.cnzz.com/z_stat.php?id=1277635480&web_id=1277635480"></script>
+</div>
+</body>
+    <script>
+        var site = ''==0?'16':'';
+        var fontSize = document.querySelector('.flex_center');
+        var pngtqico = document.querySelector('.pngtqico');
+        (function(){
+            if(hasMobile()){
+                site = 15
+                pngtqico.style.width = 1.5* (site/4.5) + 'vw'
+                pngtqico.style.height = 1.5* (site/4.5) + 'vw'
+                site = (site/4.5) + 'vw'
+                fontSize.style.fontSize = site
+            }else{
+                pngtqico.style.width = 1.5* site
+                pngtqico.style.height = 1.5* site
+            }
+        })()
+function hasMobile() {
+  let isMobile = false
+  if (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
+    isMobile = true
+  }
+  return isMobile
+}
+    </script>
+</html><style>.province{display:flex;}.province select{width:100px;height:30px;border:1px solid #e6e6e6}.province button{background:#5a98de;color:white;text-align:center;width:40px;height:30px;line-height:30px;border:none;outline:none}</style>  <div class="province" style="display:none"><div id="province"></div><button>确定</button></div><script type="text/javascript" src="static/js/jquery.provincesCity.js"></script><script type="text/javascript" src="static/js/provincesData.js"></script><script>var province=document.querySelector('#province');var province1=document.querySelector('.province');var selects=document.querySelectorAll('.selectDom');var button=province1.querySelector('button');(function(){if(hasMobile()){for(var k=0;k<selects.length;k++){selects[k].style.width='30vw';selects[k].style.height='6vh';selects[k].style.fontSize='3vw'}button.style.width='10vw';button.style.height='inherit';button.style.fontSize='3.5vw'}else{return}})();function hasMobile(){let isMobile=false;if(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)){isMobile=true}return isMobile}</script><script type="text/javascript">num=0;color="#FFFFFF";icon="tqicon1";temp=0;document.domain = "tianqi.com";document.cookie="PATHURL=c=code&id=26&icon=1&py=changdu&color=%23FFFFFF;domain=.tianqi.com";</script>
