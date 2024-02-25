@@ -1,0 +1,402 @@
+/* 页面主体 */
+.sub_main{ background:#FFF; zoom:1;overflow:hidden;}
+
+.zfxxgk-main{
+    background: #fff url(zfxxgkzl-hp.png) no-repeat center top;
+    width: 1200px;
+}
+
+.clear200{clear:both; height:200px; line-height:0; font-size:0; overflow:hidden; zoom:1;}
+
+.zfxxgk-search{
+    background:url(i-search-bg.png) center top no-repeat;
+    height: 50px;
+    margin-bottom: 84px;
+}
+
+.zfxxgk-search-form{
+    width: 508px;
+    height: 48px;
+    margin: 0 auto;
+    padding: 1px;
+}
+.zfxxgk-search-txt{
+    background: none;
+    border: none;
+    float: left;
+    border-radius: 8px;
+    height: 48px;
+    width: 435px;
+    padding: 0 10px;
+}
+.zfxxgk-search-submit{
+    border-radius: 8px;
+    background: none;
+    border: none;
+    background: url(i-search.png) center no-repeat;
+    float: left;
+    width: 40px;
+    height: 48px;
+	cursor:pointer;
+}
+
+.zfxxgk-main-wrap{
+    overflow: hidden;
+	width:1160px; margin:auto;
+}
+
+.zfxxgk-left{
+    width: 240px;
+    float: left;
+    margin-right: 20px;
+}
+.zfxxgk-tab{
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.zfxxgk-tab a,.zfxxgk-tab h3{
+    cursor: pointer;
+    display: block;
+    background: #fff;
+    color: rgb(45,102,165);
+    border: 1px solid #ddd;
+    font-size: 20px;
+    width: 218px;
+    padding-left: 20px;
+    height: 68px;
+}
+.zfxxgk-tab.active a,.zfxxgk-tab.active h3,.zfxxgk-tab.on h3,.zfxxgk-tab.on a{
+    background-color: rgb(45,102,165);
+    color: rgb(255,255,255);
+    border: 1px solid #2c6294;
+}
+.zfxxgk-tab em{
+    width: 40px;
+    height: 68px;
+    float: left;
+    margin-right: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.zfxxgk-tab span{
+    float: left;
+    padding-top: 6px;
+}
+.zfxxgk-tab.zfxxgk-tab-single span{
+    float: left;
+    padding-top: 18px;
+}
+.zfxxgk-tab  i{
+    background: url(i-add.png) center no-repeat;
+    width: 20px;
+    height: 68px;
+    float: right;
+    margin-right: 20px;
+}
+.icon0{
+    background-image: url(i-bnt00.png);
+}
+.icon1{
+    background-image: url(i-bnt01.png);
+}
+.icon2{
+    background-image: url(i-bnt02.png);
+}
+.icon3{
+    background-image: url(i-bnt03.png);
+}
+.icon4{
+    background-image: url(i-bnt04.png);
+}
+.icon5{
+    background-image: url(i-bnt05.png);
+}
+.icon6{
+    background-image: url(i-bnt06.png);
+}
+.icon7{
+    background-image: url(i-bnt07.png);
+}
+.icon8{
+    background-image: url(http://www.hepu.gov.cn/images/i-bnt08.png);
+}
+.zfxxgk-tab.active .icon0,.zfxxgk-tab.on .icon0{
+    background-image: url(i-bnt00b.png);
+}
+.zfxxgk-tab.active .icon1,.zfxxgk-tab.on .icon1{
+    background-image: url(i-bnt01b.png);
+}
+.zfxxgk-tab.active .icon2,.zfxxgk-tab.on .icon2{
+    background-image: url(i-bnt02b.png);
+}
+.zfxxgk-tab.active .icon3,.zfxxgk-tab.on .icon3,.zfxxgk-tab.on .icon3{
+    background-image: url(i-bnt03b.png);
+}
+.zfxxgk-tab.active .icon4,.zfxxgk-tab.on .icon4,.zfxxgk-tab.on .icon4{
+    background-image: url(i-bnt04b.png);
+}
+.zfxxgk-tab.active .icon5,.zfxxgk-tab.on .icon5{
+    background-image: url(i-bnt05b.png);
+}
+.zfxxgk-tab.active .icon6,.zfxxgk-tab.on .icon6{
+    background-image: url(i-bnt06b.png);
+}
+.zfxxgk-tab.active .icon7,.zfxxgk-tab.on .icon7{
+    background-image: url(i-bnt07b.png);
+}
+.zfxxgk-tab.active .icon8,.zfxxgk-tab.on .icon8{
+    background-image: url(http://www.hepu.gov.cn/images/i-bnt08b.png);
+}
+.zfxxgk-tab.active i,.zfxxgk-tab.on i{
+    background: url(i-add-click.png) center no-repeat;
+    width: 20px;
+    height: 70px;
+    float: right;
+    margin-right: 20px;
+}
+.zfxxgk-tab.on .zfxxgk-list-nav{
+	display:block;
+}
+.zfxxgk-list-nav{
+    display: none;
+    background: #fff;
+    padding: 15px 0;
+}
+.zfxxgk-list-nav li{
+    line-height: 32px;
+    font-size: 15pt;
+}
+.zfxxgk-tab.active .zfxxgk-list-nav a,.zfxxgk-tab.on .zfxxgk-list-nav a{
+    background-image: url(i-point.jpg);
+    background-color: #fff;
+    background-position:40px 14px;
+    background-repeat: no-repeat;
+    color: #4a4a4a;
+    border:1px solid #fff;
+    border-bottom: none;
+    border-top: none;
+    font-size: 15px;
+    height: auto;
+    padding-left: 55px;
+}
+.zfxxgk-list-nav li.active,.zfxxgk-tab.active .zfxxgk-list-nav li.active a,.zfxxgk-tab.active .zfxxgk-list-nav a:hover,.zfxxgk-tab.on .zfxxgk-list-nav li.active a{
+    background-color: rgb(230,245,255);
+    text-decoration: none;
+    color: #2d66a5;
+    font-weight: bold;
+}
+.zfxxgk-right{
+    background: #f9f9f9;
+    width: 900px;
+    float: left;
+}
+.zfxxgk-article{
+    color: #4d4d4d;
+    padding: 30px;
+}
+.zfxxgk-article h1{
+    text-align: center;
+    font-size: 31px;
+    font-weight: bold;
+    color: #2d66a5;
+    margin-bottom: 38px;
+}
+.zfxxgk-article .desc{
+    text-align: center;
+    font-size: 15px;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+.zfxxgk-article-index{
+    height: 940px;
+    font-size: 16px;
+    line-height: 2;
+    overflow-y: auto;
+}
+.zfxxgk-article-con{
+    font-size: 16px;
+    line-height: 2;
+}
+.zfxxgk-article-con p{
+    margin-bottom: 30px;
+}
+.zfxxgk-more{
+    padding: 30px;
+}
+.zfxxgk-more-list{
+    border-bottom: 2px solid #ccc;
+    padding: 15px 0px;
+    overflow: hidden;
+}
+.zfxxgk-more-list li{
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.zfxxgk-more-list li a{
+    color: #4d4d4d;
+    float: left;
+    margin-right: 15px;
+}
+.zfxxgk-more-list li span{
+    color: #b2b2b2;
+    float: left;
+}
+.zfxxgk-more-title{
+    border-bottom: 2px solid #ccc;
+    height: 33px;
+    line-height: 33px;
+}
+.zfxxgk-more-title a,.zfxxgk-more-table-title span,.zfxxgk-more-title span{
+    height: 33px;
+    line-height: 33px;
+    background-color: #2d66a3;
+    display: block;
+    float: left;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0px 20px;
+    min-width: 70px;
+}
+.zfxxgk-more-gird .zfxxgk-more-list{
+    border-bottom: none;
+    padding: 30px;
+}
+.zfxxgk-more-href{
+    background: #e7e7e7;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    margin: 20px auto 40px;
+    text-align: center;
+}
+.zfxxgk-more-href a{
+    color: #333;
+}
+.zfxxgk-more-table{
+    padding: 30px;
+}
+.zfxxgk-city-name{
+    font-size: 18px;
+}
+.zfxxgk-more-table-title{
+    overflow: hidden;
+    margin-top: 20px;
+}
+.zfxxgk-more-table-title span{
+    width: 240px;
+    height: 40px;
+    line-height: 40px;
+}
+.zfxxgk-table-list td{
+    width: 213px;
+    float: left;
+    height: 53px;
+    line-height: 53px;
+    font-size: 16px;
+    padding-left: 20px;
+    border-left: 2px solid #e8e8e8;
+}
+.zfxxgk-table-list td:first-child{
+    border-left: none;
+}
+.zfxxgk-table-list tr:nth-child(2n){
+    background-color: rgb(247, 247, 247);
+}
+.scroll-wrap {
+    width: 100%;
+    height: 940px;
+    position: relative;
+    font-size: 16px;
+    line-height: 30px;
+
+}
+.scroll-wrap .scroll-cont {
+    width: 800px;
+    height: 100%;
+    overflow: hidden
+}
+
+/*.scroll-wrap .scroll-cont p {
+    padding: 15px
+}*/
+
+.scroll-wrap .scroll-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+.scroll-wrap .scroll-slider {
+    background: rgb(45, 102, 165);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 80px !important;
+    border-radius: 5px;
+}
+.zfxxgk-zcwj{
+    padding: 50px 0 40px 32px;
+    overflow: hidden;
+}
+.zfxxgk-zcwj li{
+    float: left;
+    width: 232px;
+    margin-right: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+.zfxxgk-zcwj li a {
+    display: block;
+    color: rgb(45,102,165);
+    
+}
+.zfxxgk-channel-list{
+    padding: 30px;
+    overflow: hidden;
+}
+.zfxxgk-channel-list li{
+    width: 218px;
+    float: left;
+    line-height: 40px;
+    background-image: url(i-point.jpg);
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-position: 0 19px;
+    padding-left: 15px;
+}
+
+/*政策文件*/
+.zfxxgk-zcwj{
+    padding: 50px 0 40px 32px;
+    overflow: hidden;
+}
+.zfxxgk-zcwj li{
+    float: left;
+    width: 255px;
+    margin-right: 32px;
+    background: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0;
+    margin-bottom: 32px;
+}
+.zfxxgk-zcwj li a {
+    display: block;
+    color: rgb(45,102,165);
+    
+}
